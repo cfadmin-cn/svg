@@ -8,7 +8,7 @@ function Element:init(name)
 end
 
 function Element:text(text)
-  self.val = assert(type(text) == 'string' and text, "Invalid SVG text.")
+  self.val = assert(type(text) == 'string' and text, "Invalid element text.")
 end
 
 return Element
