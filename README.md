@@ -53,7 +53,6 @@ end
 output:
 
 ```bash
-<?xml version="1.0" standalone="no"?>
 <svg>
   <circle cx="200" cy="60" r="50" fill="red" style="stroke:block;stroke-width:2" />
   <rect x="300" y="20" width="100" height="100" stroke="green" stroke-width="2" />
