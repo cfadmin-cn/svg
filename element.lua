@@ -4,11 +4,10 @@ local Root = require "svg.root"
 local Element = class("Element", Root)
 
 function Element:init(name)
-  self.head = ""
-  self.name = assert(name, "Invalid element name.")
+  self.name = assert(name and name ~= "svg" and name, "Invalid element name.")
 end
 
-function Root:text(text)
+function Element:text(text)
   self.val = assert(type(text) == 'string' and text, "Invalid SVG text.")
 end
 
