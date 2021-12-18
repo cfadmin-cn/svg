@@ -5,7 +5,6 @@ local type, ipairs, assert = type, ipairs, assert
 local Root = class("Root")
 
 function Root:ctor(...)
-  self.head = [[<?xml version="1.0" standalone="no"?>]]
   self.name = "svg"
   self.nodes = {}
   self.attrs = {}
@@ -55,8 +54,8 @@ end
 ---@return string
 function Root:tostring(n)
   local tree, attrs = self:topack(n or 0)
-  local fmt = #tree == 0 and ('\n' .. (" "):rep(n or 0) .. '<%s%s />') or '\n' .. (" "):rep(n or 0) .. '<%s%s>%s\n'.. (" "):rep(n or 0) .. '</%s>'
-  return self.head .. string.format(fmt, self.name, table.concat(attrs), table.concat(tree, " ") .. (self.val or ""), self.name)
+  local fmt = #tree == 0 and ((self.name == "svg" and "" or '\n') .. (" "):rep(n or 0) .. '<%s%s />') or ((self.name == "svg" and "" or '\n') .. (" "):rep(n or 0) .. '<%s%s>%s\n'.. (" "):rep(n or 0) .. '</%s>')
+  return string.format(fmt, self.name, table.concat(attrs), table.concat(tree, " ") .. (self.val or ""), self.name)
 end
 
 ---comment 保存到文件
