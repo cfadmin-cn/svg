@@ -59,3 +59,14 @@ output:
   <line x1="0" y1="0" x2="100" y2="100" style="stroke:blue;stroke-width:5" />
 </svg>
 ```
+
+## Note
+
+  If you want to render directly in a browser or other client, set attributes such as' XMLNS ', 'version', 'width', and 'height' for 'SVG'.
+  
+```lua
+svg:set("xmlns", "http://www.w3.org/2000/svg")
+svg:set("version", 1.0)
+svg:set("width", 1024)
+svg:set("height", 768)
+```
