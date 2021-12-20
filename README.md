@@ -62,7 +62,7 @@ output:
 
 ## Note
 
-  If you want to render directly in a browser or other client, set attributes such as' XMLNS ', 'version', 'width', and 'height' for 'SVG'.
+  If you want to render directly in a browser or other client, set attributes such as `xmlns`, `version`, `width`, and `height` for `SVG`.
   
 ```lua
 svg:set("xmlns", "http://www.w3.org/2000/svg")
